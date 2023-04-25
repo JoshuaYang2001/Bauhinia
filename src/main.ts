@@ -19,6 +19,32 @@ const router = VueRouter.createRouter({
 });
 app.use(router);
 
+// 路由拦截
+import { getItem } from './utils/storage.js'
+
+// 白名单
+const whiteList = ['/login']
+
+router.beforeEach(async (to, from, next) => {
+    // to and from are both route objects. must call `next`.
+    const data = getItem("userID")
+    if (data) {
+        if (to.path === '/login') {
+            next('/')
+        } else {
+            next()
+        }
+    } else {
+        if (whiteList.indexOf(to.path) > -1) {
+            next()
+        } else if (to.path === '/') {
+            next('/login')
+        } else {
+            next()
+        }
+    }
+})
+
 // 状态管理
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
