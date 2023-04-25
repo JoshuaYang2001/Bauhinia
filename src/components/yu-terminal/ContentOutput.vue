@@ -52,4 +52,8 @@ const outputTagColor = computed((): string => {
   font-size: 16px;
   border: none;
 }
+.content-output {
+  color: #bae6fd;
+  font-size: 20px;
+}
 </style>

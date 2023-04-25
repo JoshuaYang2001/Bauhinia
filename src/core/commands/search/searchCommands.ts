@@ -1,41 +1,41 @@
 import { CommandType } from "../../command";
-import baiduCommand from "./baiduCommand";
-import baidudevCommand from "./baidudevCommand";
-import bilibiliCommand from "./bilibili/bilibiliCommand";
-import bingCommand from "./bingCommand";
-import codenavCommand from "./codenavCommand";
-import doubanCommand from "./doubanCommand";
-import douyinCommand from "./douyinCommand";
+// import baiduCommand from "./baiduCommand";
+// import baidudevCommand from "./baidudevCommand";
+// import bilibiliCommand from "./bilibili/bilibiliCommand";
+// import bingCommand from "./bingCommand";
+// import codenavCommand from "./codenavCommand";
+// import doubanCommand from "./doubanCommand";
+// import douyinCommand from "./douyinCommand";
 import githubCommand from "./githubCommand";
 import googleCommand from "./googleCommand";
 import wangyiyunCommand from "./wangyiyunCommand";
 import zhihuCommand from "./zhihuCommand";
 import gengCommand from "./gengCommand";
-import duckduckgoCommand from "./duckduckgoCommand";
+// import duckduckgoCommand from "./duckduckgoCommand";
 import fsearchCommand from "./fsearchCommand";
 import sogouCommand from "./sogouCommand";
-import mdnCommand from "./mdnCommand"
+import mdnCommand from "./mdnCommand";
 
 /**
  * 搜索源
  */
 const fromDict: Record<string, CommandType> = {
-  baidu: baiduCommand,
-  baidudev: baidudevCommand,
-  bilibili: bilibiliCommand,
-  bing: bingCommand,
-  codenav: codenavCommand,
-  douban: doubanCommand,
-  douyin: douyinCommand,
-  duckduckgo: duckduckgoCommand,
-  fsearch: fsearchCommand,
-  github: githubCommand,
-  google: googleCommand,
-  sogou: sogouCommand,
-  wangyiyun: wangyiyunCommand,
-  zhihu: zhihuCommand,
-  geng: gengCommand,
-  mdn: mdnCommand
+  // baidu: baiduCommand,
+  // baidudev: baidudevCommand,
+  // bilibili: bilibiliCommand,
+  // bing: bingCommand,
+  // codenav: codenavCommand,
+  // douban: doubanCommand,
+  // douyin: douyinCommand,
+  // duckduckgo: duckduckgoCommand,
+  // fsearch: fsearchCommand,
+  // github: githubCommand,
+  // google: googleCommand,
+  // sogou: sogouCommand,
+  // wangyiyun: wangyiyunCommand,
+  // zhihu: zhihuCommand,
+  // geng: gengCommand,
+  // mdn: mdnCommand,
 };
 
 /**

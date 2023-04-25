@@ -405,7 +405,7 @@ onMounted(() => {
     });
   } else {
     terminal.writeTextOutput(
-      `Welcome to Bauhinia, coolest browser index for geeks!`
+      `Welcome to Bauhinia,This is a typed interaction system`
     );
     terminal.writeTextOutput(`: please input 'help' to enjoy`);
     terminal.writeTextOutput("<br/>");

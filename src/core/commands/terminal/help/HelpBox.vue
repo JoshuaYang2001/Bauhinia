@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-      ⭐️ 使用 [help 命令英文名] 可以查询某命令的具体用法，如：help search
-    </div>
+    <div>使用 [help 命令英文名] 可以查询某命令的具体用法，如：help search</div>
     <div>命令列表：</div>
     <div v-for="(command, index) in commandList" :key="index">
       <a-row :gutter="16">

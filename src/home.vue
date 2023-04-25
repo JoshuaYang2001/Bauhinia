@@ -33,20 +33,24 @@
       </div>
     </div>
 
-    <div class="sticky bottom-0 w-full p-6 pb-8 bg-gray-100">
+    <div class="sticky bottom-0 w-full p-6 pb-8 bg-gray-600">
       <div class="-mt-2 mb-2 text-sm text-gray-500" v-if="isConfig">
         请输入 API Key：
       </div>
       <div class="flex">
         <input
-          class="input"
+          class="input bg-gray-200"
           :type="isConfig ? 'password' : 'text'"
           :placeholder="isConfig ? 'sk-xxxxxxxxxx' : '请输入'"
           v-model="messageContent"
           @keydown.enter="isTalking || sendOrSave()"
         />
-        <button class="btn" :disabled="isTalking" @click="sendOrSave()">
-          <el-icon><Promotion /></el-icon>
+        <button
+          class="btn hover:bg-green-600"
+          :disabled="isTalking"
+          @click="sendOrSave()"
+        >
+          send
         </button>
       </div>
     </div>
@@ -77,15 +81,16 @@ const messageList = ref<ChatMessage[]>([
   },
   {
     role: "assistant",
-    content: `你好，我是AI语言模型，我可以提供一些常用服务和信息，例如：
-  
-  1. 翻译：我可以把中文翻译成英文，英文翻译成中文，还有其他一些语言翻译，比如法语、日语、西班牙语等。
-  
-  2. 咨询服务：如果你有任何问题需要咨询，例如健康、法律、投资等方面，我可以尽可能为你提供帮助。
-  
-  3. 闲聊：如果你感到寂寞或无聊，我们可以聊一些有趣的话题，以减轻你的压力。
-  
-  请告诉我你需要哪方面的帮助，我会根据你的需求给你提供相应的信息和建议。`,
+    content: `你好，我是Bauhinia，一个AI语言机器人，我可以在任何领域与你展开对话，例如：
+
+1. 充当顾问：我可以充当顾问，尽力帮你解决健康医疗、投资理财、人文艺术等诸多方面的问题。
+
+2. 学术编辑：我可以帮助你进行学术论文、研究报告的编辑和校对工作，确保文本的正确性、一致性和完整性
+
+3. 数据分析：我可以帮助你进行各种类型的数据分析、包括统计分析、文本分析，并提供告质量的数据报告
+
+你想象力的边际决定了我回答问题的广度，请在思维的瀚海里畅游吧
+`,
   },
 ]);
 

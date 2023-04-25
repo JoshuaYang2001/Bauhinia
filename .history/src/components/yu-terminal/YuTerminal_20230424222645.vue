@@ -472,7 +472,7 @@ defineExpose({
 
 .command-input :deep(input) {
   color: white !important;
-  font-size: 16px;
+  font-size: 20px;
   padding: 0 10px;
 }
 

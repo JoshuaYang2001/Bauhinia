@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="yu-terminal-wrapper"
-    :style="wrapperStyle"
-    @click="handleClickWrapper"
-  >
+  <div class="yu-terminal-wrapper" @click="handleClickWrapper">
     <div ref="terminalRef" class="yu-terminal" :style="mainStyle">
       <a-collapse
         v-model:activeKey="activeKeys"
@@ -243,18 +239,18 @@ const mainStyle = computed(() => {
 /**
  * 终端包装类主样式
  */
-const wrapperStyle = computed(() => {
-  const { background } = configStore;
-  const style = {
-    ...mainStyle.value,
-  };
-  if (background.startsWith("http")) {
-    style.background = `url(${background})`;
-  } else {
-    style.background = background;
-  }
-  return style;
-});
+// const wrapperStyle = computed(() => {
+//   const { background } = configStore;
+//   const style = {
+//     ...mainStyle.value,
+//   };
+//   if (background.startsWith("http")) {
+//     style.background = `url(${background})`;
+//   } else {
+//     style.background = background;
+//   }
+//   return style;
+// });
 
 /**
  * 清空所有输出
@@ -405,9 +401,10 @@ onMounted(() => {
     });
   } else {
     terminal.writeTextOutput(
-      `Welcome to Bauhinia, coolest browser index for geeks!`
+      `Welcome to Bauhinia,
+      This is a typed interaction system,<br>We've integrated commands to help you quickly complete certain characteristic tasks`
     );
-    terminal.writeTextOutput(`: please input 'help' to enjoy`);
+    terminal.writeTextOutput(`please input 'help' to query command set`);
     terminal.writeTextOutput("<br/>");
   }
 });
@@ -433,7 +430,7 @@ defineExpose({
 }
 
 .yu-terminal {
-  background: rgba(0, 0, 0, 0.6);
+  background: #121a29;
   padding: 20px;
   overflow: scroll;
 }
@@ -467,12 +464,12 @@ defineExpose({
 }
 
 .command-input {
-  caret-color: white;
+  caret-color: rgb(192, 242, 100);
 }
 
 .command-input :deep(input) {
-  color: rgb(79, 215, 79) !important;
-  font-size: 16px;
+  color: rgb(192, 242, 100) !important;
+  font-size: 20px;
   padding: 0 10px;
 }
 
@@ -483,12 +480,12 @@ defineExpose({
 }
 
 .command-input-prompt {
-  color: white;
+  color: rgb(192, 242, 100);
   background: transparent;
 }
 
 .terminal-row {
-  color: white;
+  color: rgb(192, 242, 100);
   font-size: 16px;
   font-family: courier-new, courier, monospace;
 }
